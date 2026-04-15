@@ -1,0 +1,63 @@
+﻿<Window x:Class="MikeAssistant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Майк" Height="300" Width="300"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="{DynamicResource BackgroundBrush}"
+        Foreground="{DynamicResource ForegroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30" GlassFrameThickness="0" ResizeBorderThickness="5"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="IconButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="MinWidth" Value="32"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Border Background="{DynamicResource BackgroundBrush}" CornerRadius="8">
+        <DockPanel Margin="10">
+            <!-- Кнопки управления окном -->
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,30,0,10">
+                <Button x:Name="ThemeToggleButton" Content="🌓" Style="{StaticResource IconButton}" Click="ThemeToggle_Click" ToolTip="Сменить тему"/>
+                <Button x:Name="MinimizeButton" Content="─" Style="{StaticResource IconButton}" Click="MinimizeWindow_Click" ToolTip="Свернуть"/>
+            </StackPanel>
+
+            <!-- Основное содержимое -->
+            <StackPanel Margin="0,30,0,10">
+                <WrapPanel Margin="0,0,0,20" HorizontalAlignment="Center">
+                    <TextBlock Text="Интернет:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <Rectangle x:Name="InternetIndicator" Width="16" Height="16" Fill="{DynamicResource IndicatorOffBrush}" RadiusX="8" RadiusY="8" Margin="0,0,15,0"/>
+
+                    <!-- Единая кликабельная кнопка для LM Studio -->
+                    <Button x:Name="LmStudioStatusButton" Background="Transparent" BorderThickness="0" 
+                        Click="LmStudioStatusButton_Click" ToolTip="Настройки LM Studio" 
+                        Padding="0" Margin="0,0,10,0" Cursor="Hand">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="LM Studio:" VerticalAlignment="Center" Margin="0,0,5,0" 
+                                Foreground="{DynamicResource ForegroundBrush}"/>
+                            <Rectangle x:Name="StatusIndicator" Width="16" Height="16" Fill="{DynamicResource IndicatorOffBrush}" RadiusX="8" RadiusY="8"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="RefreshStatusButton" Content="⟳" FontSize="12" Style="{StaticResource IconButton}" Click="RefreshStatusButton_Click" ToolTip="Обновить статус"/>
+                </WrapPanel>
+
+                <Border Background="{DynamicResource CardBackgroundBrush}" CornerRadius="8" Padding="6" Margin="0,0,0,20">
+                    <Canvas x:Name="WaveCanvas" Height="50" Background="{DynamicResource BackgroundBrush}"/>
+                </Border>
+
+                <TextBlock x:Name="InfoText" Text="Скажите 'алло майк'" FontSize="14" FontWeight="Medium" TextAlignment="Center" Foreground="{DynamicResource ForegroundBrush}"/>
+            </StackPanel>
+
+        </DockPanel>
+    </Border>
+</Window>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" xml:lang="ru-RU" root="PassMike"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics-ms/1.0">
+	<rule id="PassMike" scope="public">
+		<one-of>
+			<item> алло майк </item>
+			<item> отбой </item>
+		</one-of>
+	</rule>
+</grammar>

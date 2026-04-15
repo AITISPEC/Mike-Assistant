@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" xml:lang="ru-RU" root="Dialog"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics-ms/1.0">
+
+	<rule id="Dialog" scope="public">
+		<one-of>
+			<!-- 1. Управление режимом (4) -->
+			<item> отбой </item>
+			<item> выход </item>
+			<item> закончить </item>
+			<item> хватит </item>
+
+			<!-- 2. Приветствия (7) -->
+			<item> привет </item>
+			<item> здравствуй </item>
+			<item> доброе утро </item>
+			<item> добрый день </item>
+			<item> добрый вечер </item>
+			<item> здорово </item>
+			<item> приветствую </item>
+
+			<!-- 3. Прощания (5) -->
+			<item> пока </item>
+			<item> до свидания </item>
+			<item> всего хорошего </item>
+			<item> удачи </item>
+			<item> прощай </item>
+
+			<!-- 4. Вопросы о состоянии (7) -->
+			<item> как дела </item>
+			<item> как ты </item>
+			<item> как настроение </item>
+			<item> как жизнь </item>
+			<item> как поживаешь </item>
+			<item> что нового </item>
+			<item> что слышно </item>
+
+			<!-- 5. Вопросы о возможностях (8) -->
+			<item> что ты умеешь </item>
+			<item> какие у тебя функции </item>
+			<item> какие у тебя есть функции </item>
+			<item> какие у тебя возможности </item>
+			<item> что ты можешь </item>
+			<item> чем ты полезен </item>
+			<item> что ты делаешь </item>
+			<item> для чего ты нужен </item>
+
+			<!-- 6. Вопросы о личности (7) -->
+			<item> кто ты </item>
+			<item> как тебя зовут </item>
+			<item> твоё имя </item>
+			<item> как твоё имя </item>
+			<item> расскажи о себе </item>
+			<item> что ты такое </item>
+			<item> откуда ты </item>
+
+			<!-- 7. Поиск в интернете (6) -->
+			<item> найди в интернете </item>
+			<item> поищи в интернете </item>
+			<item> загугли </item>
+			<item> найди </item>
+			<item> поищи </item>
+			<item> открой браузер </item>
+
+			<!-- 8. Запрос к нейросети (6) -->
+			<item> спроси у нейросети </item>
+			<item> спроси у ии </item>
+			<item> обратись к нейросети </item>
+			<item> пусть нейросеть ответит </item>
+			<item> спроси сам </item>
+			<item> нейросеть </item>
+
+			<!-- 9. Благодарности (4) -->
+			<item> спасибо </item>
+			<item> благодарю </item>
+			<item> спасибо большое </item>
+			<item> мерси </item>
+
+			<!-- 10. Извинения (4) -->
+			<item> извини </item>
+			<item> прости </item>
+			<item> извините </item>
+			<item> прошу прощения </item>
+
+			<!-- 11. Согласие/отказ (8) -->
+			<item> да </item>
+			<item> нет </item>
+			<item> хорошо </item>
+			<item> ладно </item>
+			<item> конечно </item>
+			<item> согласен </item>
+			<item> отлично </item>
+			<item> не надо </item>
+
+			<!-- 12. Разное (8) -->
+			<item> помоги </item>
+			<item> подскажи </item>
+			<item> ответь </item>
+			<item> скажи </item>
+			<item> покажи </item>
+			<item> расскажи </item>
+			<item> объясни </item>
+			<item> повтори </item>
+		</one-of>
+	</rule>
+
+</grammar>

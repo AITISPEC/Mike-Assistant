@@ -1,0 +1,50 @@
+<Window x:Class="MikeAssistant.LmStudioSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LM Studio" Height="450" Width="450"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource BackgroundBrush}"
+        Foreground="{DynamicResource ForegroundBrush}">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="LM Studio" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <GroupBox Grid.Row="1" Header="Информация о сервере" Margin="0,5">
+            <StackPanel Margin="10">
+                <TextBlock x:Name="ServerStatusText" Text="Статус: проверка..." />
+                <TextBlock x:Name="ServerUrlText" Text="URL: " />
+                <TextBlock x:Name="ServerContextText" Text="Контекст: " />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Header="Доступные модели" Margin="0,5">
+            <StackPanel Margin="10">
+                <ComboBox x:Name="ModelsComboBox" DisplayMemberPath="DisplayName" SelectedValuePath="Key"
+                          SelectionChanged="ModelsComboBox_SelectionChanged" Margin="0,5"/>
+                <TextBlock x:Name="ModelStatusText" Text="Модель не выбрана" Foreground="Orange" Margin="0,5,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="3" Header="Пресет (системный промпт)" Margin="0,5">
+            <StackPanel Margin="10">
+                <ComboBox x:Name="PresetsComboBox" DisplayMemberPath="Name" SelectedValuePath="Id"
+                          Margin="0,5">
+                    <ComboBoxItem Content="Стандартный (без пресета)" IsSelected="True"/>
+                </ComboBox>
+                <TextBlock Text="Выберите пресет из LM Studio" FontSize="11" Foreground="Gray" Margin="0,5,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="OK" Width="80" Margin="0,0,10,0" Click="OkButton_Click" IsDefault="True"/>
+            <Button Content="Отмена" Width="80" Click="CancelButton_Click" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
