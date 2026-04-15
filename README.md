@@ -52,7 +52,7 @@
 2. **Скопируйте модели Sherpa-ONNX в папку sherpa (на один уровень выше выходной папки сборки)**.
 Структура должна выглядеть так:
 
-text
+```text
 sherpa/
 ├── stt/
 │   ├── model.onnx
@@ -61,7 +61,7 @@ sherpa/
     ├── model.onnx
     ├── tokens.txt
     └── data/               (файлы espeak-ng для русского языка)
-    
+```
 3. **Настройте LM Studio**:
 Запустите LM Studio, загрузите любую совместимую модель.
 Убедитесь, что сервер запущен на http://localhost:1234 (или измените URL в Config/appsettings.json).
