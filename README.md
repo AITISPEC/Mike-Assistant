@@ -46,7 +46,7 @@
 
 1. **Клонируйте репозиторий**:
    ```bash
-   git clone https://github.com/AITISPEC/MikeAssistant.git
+   git clone https://github.com/AITISPEC/Mike-Assistant.git
    ```
    
 2. **Скопируйте модели Sherpa-ONNX в папку sherpa (на один уровень выше выходной папки сборки)**.
