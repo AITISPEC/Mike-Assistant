@@ -5,7 +5,7 @@
 Он умеет распознавать русскую речь, отвечать голосом, выполнять поиск в интернете и общаться с локальной LLM (через LM Studio).  
 Проект написан на C# (WPF, .NET Framework 4.8).
 
-<img src=".main/mike_assistant-black.png" alt="Скриншот" width="200"> <img src=".main/mike_assistant-white.png" alt="Скриншот" width="200">
+<img src="../main/mike_assistant-black.png" alt="Скриншот" width="200"> <img src=".main/mike_assistant-white.png" alt="Скриншот" width="200">
 
 ## ✨ Основные возможности
 
