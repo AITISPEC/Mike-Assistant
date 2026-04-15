@@ -92,3 +92,5 @@ Microsoft.Speech (SAPI) – быстрое распознавание коман
 
 ## 📜 Лицензия
 Проект распространяется под лицензией Apache 2.0. Подробнее см. в файле LICENSE.
+
+[![Latest Release](https://img.shields.io/github/v/release/AITISPEC/Mike-Assistant?label=latest%20release)](https://github.com/AITISPEC/Mike-Assistant/releases/latest)
